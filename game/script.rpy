@@ -1,7 +1,7 @@
 ﻿# Вы можете расположить сценарий своей игры в этом файле.
 
 # Определение персонажей игры.
-define e = Character('Эйлин', color="#c8ffc8")
+define me = Character('Максим', color="#3f5af3")
 init:
     image bg1 = im.Scale("bg dull_street.png", 1920, 1080)
     image bg2 = im.Scale("field 2.png", 1920, 1080)
@@ -9,7 +9,6 @@ init:
     image bg4 = im.Scale("town.png", 1920, 1080)
     image bg5 = im.Scale("wheat field.png", 1920, 1080)
     image bg6 = im.Scale("forest.png", 1920, 1080)
-    image bg7 = im.Scale("shop.png", 1920, 1080)
     image bg8 = im.Scale("room.png", 1920, 1080)
 
 # Вместо использования оператора image можете просто
@@ -19,75 +18,22 @@ init:
 
 # Игра начинается здесь:
 label start:
-
     show bg1
 
     show eileen happy
 
-    e "Шикарный фон1"
+    me "Вечер, снова вечер. Как по часам, ровно в восемь, я прохожу эту улицу. И, что странно, всегда ловлю себя на одной и той же мысли…"
+    me "Все эти люди куда-то спешат и торопятся. А стоит ли мне прибавить шаг, чтобы успеть зайти в магазин?"
 
-    jump episode2
-
-
-label episode2:
-
-    show bg2
-
-    e "ООО ШИКАРНЫЙ ФОН 2"
-
-    jump episode3
-
-
-label episode3:
+    menu:
+        "Прибавить шаг":
+            $ beer = True
+        "Продолжить идти неспеша":
+            $ beer = False
     
-    show bg3
+    me "Да, так и сделаю. Что-то мне подсказывает, что так будет лучше. И с каких это пор я стал прислушиваться к интуиции? Теряю хватку…"
+    me "Ладно, не буду о грустном. Сегодня прекрасный день, а ведь неделя только началась, если так дело пойдет, то я с нетерпением буду ждать пятницы"
+    me "Возможно, снимать квартиру на другом конце города от работы было не самой лучшей идеей, однако рынок решил иначе"
+    me "Как бы то ни было, а до Пятерочки я дошел быстро, ну-с, посмотрим, что у них есть сегодня..."
 
-    e "ОПА ШИКАРНЫЙ ФОН 3"
-
-    jump episode4
-
-
-label episode4:
-
-    show bg4
-
-    e "УРААА ШИКАРНЫЙ ФОН 4"
-    
-    jump episode5
-
-
-label episode5:
-
-    show bg5
-
-    e "Блин что не фон все красивые"
-    
-    jump episode6
-
-
-
-label episode6:
-
-    show bg6
-
-    e "Ура фон 6 :)"
-    
-    jump episode7
-
-
-label episode7:
-
-    show bg7
-
-    e "Фон 7 погнали"
-
-    jump episode8
-
-
-label episode8:
-
-    show bg8
-
-    e "Фон 8 норм"
-
-    return
+    $ renpy.call("episode1", beer=beer)

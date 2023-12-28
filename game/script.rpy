@@ -3,13 +3,7 @@
 # Определение персонажей игры.
 define me = Character('Максим', color="#3f5af3")
 init:
-    image bg1 = im.Scale("bg dull_street.png", 1920, 1080)
-    image bg2 = im.Scale("field 2.png", 1920, 1080)
-    image bg3 = im.Scale("castle.png", 1920, 1080)
-    image bg4 = im.Scale("town.png", 1920, 1080)
-    image bg5 = im.Scale("wheat field.png", 1920, 1080)
-    image bg6 = im.Scale("forest.png", 1920, 1080)
-    image bg8 = im.Scale("room.png", 1920, 1080)
+    image start = im.Scale("start.png", 1920, 1080)
 
 # Вместо использования оператора image можете просто
 # складывать все ваши файлы изображений в папку images.
@@ -18,7 +12,7 @@ init:
 
 # Игра начинается здесь:
 label start:
-    show bg1
+    show start
 
     me "Вечер, снова вечер. Как по часам, ровно в восемь, я прохожу эту улицу. И, что странно, всегда ловлю себя на одной и той же мысли…"
     me "Все эти люди куда-то спешат и торопятся. А стоит ли мне прибавить шаг, чтобы успеть зайти в магазин?"
@@ -34,6 +28,6 @@ label start:
     me "Возможно, снимать квартиру на другом конце города от работы было не самой лучшей идеей, однако рынок решил иначе"
     me "Как бы то ни было, а до Пятерочки я дошел быстро, ну-с, посмотрим, что у них есть сегодня..."
 
-    hide bg1
+    hide start
 
     $ renpy.call("episode1", beer=beer)

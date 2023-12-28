@@ -1,9 +1,9 @@
-define seller_dialogue = Character('Продавец', color="#c8ffc8")
+define seller = Character('Продавец', color="#c8ffc8")
 define anton = Character('Антон', color="#50fa50")
 define me = Character('Максим', color="#3f5af3")
 init:
     image shop = im.Scale("shop.png", 1920, 1080)
-    image seller = im.Scale("seller1.png", 615, 1024)
+    image anton_pic = im.Scale("anton.png", 615, 1024)
 
 label episode1(beer = False):
     show shop
@@ -19,9 +19,9 @@ label episode1(beer = False):
         "Ничего":
             me "Дома есть кофе, им и обойдусь сегодня"
 
-    show seller
+    show anton_pic
     with dissolve
-    seller_dialogue "Здравствуйте, пакет нужен, скидочная карта есть?"
+    seller "Здравствуйте, пакет нужен, скидочная карта есть?"
 
     me "Здра..."
     me "Тоха? Ты чтоль? Вот это встреча!"
@@ -31,7 +31,7 @@ label episode1(beer = False):
     me "Не ожидал увидеть выпускника УГИ здесь, хах, удачи тебе. Сдачи не надо"
 
     hide shop
-    hide seller
+    hide anton_pic
 
     $ renpy.call("episode2", beer=beer)
 

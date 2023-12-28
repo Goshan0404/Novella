@@ -1,9 +1,12 @@
 define me = Character('Максим', color="#3f5af3")
+
 init:
     image wheat_field = im.Scale("wheat_field.png", 1920, 1080)
     image white = Solid("#fff")
 
 label episode3:
+    $ social_rating = 0
+
     show white
 
     me "Как же ярко, словно тысячи софитов направлены на меня. Еще и голова трещит, да, пора привести наконец в порядок свой режим сна"

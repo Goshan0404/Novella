@@ -8,12 +8,13 @@ init:
     image tapher_pic = im.Scale("tapher.png", 615, 1024)
     image schwert_pic = im.Scale("schwert.png", 615, 1024)
     image lignarin_pic = im.Scale("lignarin.png", 615, 1024)
+    image marco_pic = im.Scale("marco.png", 615, 1024)
 
 label episode7:
     show village
     with fade
 
-    show lignarin_pic at center
+    show lignarin_pic
     show marco_pic at left
     show tapher_pic at right
     with dissolve
@@ -31,7 +32,7 @@ label episode7:
     me "Да-да, это я уже слышал"
 
     hide tapher_pic
-    show schwert_pic
+    show schwert_pic at right
     with dissolve
 
     schwert "Эй, неужели в наше захолустье кого-то заносит? Вы явно не местные"
@@ -46,6 +47,8 @@ label episode7:
 
     menu:
         "Пойти с кузнецом":
+            $ social_rating += 1
+
             me "Веди нас, кузнец. Всегда мечтал увидеть, как доспехи делают"
 
             hide lignarin_pic

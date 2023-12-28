@@ -3,6 +3,7 @@
 # Определение персонажей игры.
 define me = Character('Максим', color="#3f5af3")
 init:
+    default social_rating = 'none'
     image start = im.Scale("start.png", 1920, 1080)
 
 # Вместо использования оператора image можете просто

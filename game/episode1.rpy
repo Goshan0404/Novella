@@ -1,6 +1,7 @@
 define seller = Character('Продавец', color="#c8ffc8")
 define anton = Character('Антон', color="#50fa50")
 define me = Character('Максим', color="#3f5af3")
+
 init:
     image shop = im.Scale("shop.png", 1920, 1080)
     image anton_pic = im.Scale("anton.png", 615, 1024)

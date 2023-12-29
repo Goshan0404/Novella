@@ -6,7 +6,7 @@ define lignarin = Character('Лигнарин', color="#d83939")
 
 init:
     image castle_inside = im.Scale("castle_inside.png", 1920, 1080)
-    #image todd_pic = im.Scale("todd.png", 615, 1024) # TODO: ТОД ИЗОБРАЖЕНИЕ
+    image todd_pic = im.Scale("todd.png", 615, 1024)
     image tapher_pic = im.Scale("tapher.png", 615, 1024)
     image marco_pic = im.Scale("marco.png", 615, 1024)
     image lignarin_pic = im.Scale("lignarin.png", 615, 1024)
@@ -28,8 +28,8 @@ label episode12:
     me "Так...все заброшено, ничего важного нет. Да и признаков жизни тоже не вижу"
     me "Похоже, что зря мы шли в такую даль. Думаю, что это место никак не связано с пропажами людей"
 
-    #show todd_pic at right
-    #with dissolve
+    show todd_pic at right
+    with dissolve
 
     todd "Ты... Твой путь завершен, человек, иди ко мне"
 
@@ -110,8 +110,8 @@ label episode12:
 
             todd "Ты пожалеешь, джедай. Но у тебя все еще есть шанс. Он дается немногим, только избранным, и ты — один из них! Ты еще вспомнишь мои слова!"
 
-            #hide todd_pic
-            #with dissolve
+            hide todd_pic
+            with dissolve
 
             me "Ребята, как вы? Не знаю почему, но у меня чертовски болит голова…"
 

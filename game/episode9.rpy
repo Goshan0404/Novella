@@ -1,12 +1,11 @@
 define me = Character('Максим', color="#3f5af3")
 define marco = Character('Марко', color="#0f8a15ff")
-define vaisen = Character('Вайзен') # TODO: ЦВЕТ
+define vaisen = Character('Вайзен', color="#52ff69")
 
 init:
     image mill = im.Scale("mill.png", 1920, 1080)
     image marco_pic = im.Scale("marco.png", 615, 1024)
-    # TODO: ВАЙЗЕН ИЗОБРАЖЕНИЕ
-
+    image vaisen_pic = im.Scale("vaisen.png", 615, 1024)
 label episode9:
     show mill
     show marco_pic at right
@@ -20,8 +19,9 @@ label episode9:
 
     me "Есть как-то хочется..."
 
-    # TODO: ВАЙЗЕН ПОЯВЛЯЕТСЯ
-    
+    show vaisen_pic
+    with dissolve
+
     vaisen "Голодны? У меня как раз есть еда. Я Вайзен, мельник"
 
     me "Откуда же ты взялся такой?"
@@ -57,7 +57,7 @@ label episode9:
             marco "Подъем, девочки. Привал окончен, двигаем"
 
     hide marco_pic
-    # TODO: HIDE VAISEN
+    hide vaisen_pic
     hide mill
     with fade
     jump episode10

@@ -67,6 +67,6 @@ label episode4:
     
     hide dog
     hide town
-    hide lignarin
+    hide lignarin_pic
     with dissolve
     jump episode5

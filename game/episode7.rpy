@@ -7,16 +7,16 @@ init:
     image village = im.Scale("village.png", 1920, 1080)
     image tapher_pic = im.Scale("tapher.png", 615, 1024)
     image schwert_pic = im.Scale("schwert.png", 615, 1024)
-    image lignarin_pic = im.Scale("lignarin.png", 615, 1024)
+    image lignarin_pic1 = im.Scale("lignarin.png", 615, 1024)
     image marco_pic = im.Scale("marco.png", 615, 1024)
 
 label episode7:
     show village
     with fade
 
-    show lignarin_pic
     show marco_pic at left
     show tapher_pic at right
+    show lignarin_pic1
     with dissolve
 
     lignarin "О, наконец-то вы добрались. Успели познакомиться с нашим новым товарищем?"
@@ -51,7 +51,7 @@ label episode7:
 
             me "Веди нас, кузнец. Всегда мечтал увидеть, как доспехи делают"
 
-            hide lignarin_pic
+            hide lignarin_pic1
             hide marco_pic
             hide schwert_pic
             hide village
@@ -66,10 +66,10 @@ label episode7:
 
             lignarin "Ну и ну...пойдемте, друзья"
 
-            hide lignarin_pic
-            hide marco_pic
-            hide schwert_pic
-            hide village
-            with fade
-
-            jump episode9
+    hide lignarin_pic1
+    hide lignarin
+    hide marco_pic
+    hide schwert_pic
+    hide village
+    with fade
+    jump episode9

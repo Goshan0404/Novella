@@ -67,7 +67,9 @@ label episode6:
 
             hide munce_pic with dissolve
 
-    hide marco_pic with dissolve
-    hide bridge with dissolve
+    hide lignarin_pic
+    hide marco_pic
+    hide bridge
+    with fade
     jump episode7
 
